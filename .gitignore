@@ -1,0 +1,14 @@
+# Ignore all .env files
+*.env
+env/
+
+# Ignore a specific directory
+node_modules/
+
+# Ignore all files with a .log extension
+*.log
+
+# Ignore a specific file
+config.js
+
+main.ipynb
