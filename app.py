@@ -42,9 +42,16 @@ def check_domain_availability(base_domain):
     return available_domains
 
 
-def generate_brand_names(topic, model):
-    prompt = f"I want to find a good brand name for a company related to {topic}. I need a list of brand names words that are inspired by or related to {topic}. Generate a list of keywords composed by only one word. Prepare the list with names divided only by a comma, only write the words in a list, don't write any introduction."
+def generate_brand_names(topic):
+    """
+    Generates a list of unique, single-word brand names inspired by or related to a given topic.
+    The output is a string of words separated by commas, avoiding common or generic terms,
+    focusing on connections to the topic's concepts, theories, or phenomena.
+    These names aim to be diverse and memorable, suitable for establishing a strong brand identity.
+    """
+    prompt = f"Generate a list of unique, single-word brand names inspired by or related to {topic}, separated by commas. Include creative and memorable words. Avoid common or generic terms, and focus on words that have a strong connection to {topic} concepts, theories, or phenomena. The list should be diverse, appealing to a wide range of potential customers, and suitable for a company looking to establish a strong brand identity."
     messages = [{"role": "user", "content": prompt}]
+
 
     system_prompt = "You are a helpful assistant." # Optional
     session_id = "my-session" # Optional: a unique identifier to maintain session context
