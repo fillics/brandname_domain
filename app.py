@@ -13,7 +13,7 @@ api_key = os.getenv('GODADDY_API_KEY')
 api_secret = os.getenv('GODADDY_API_SECRET')
 
 
-models = ["gpt-3.5-turbo", "gpt-4-eu", "claude-3-opus-20240229"]
+models = ["gpt-3.5-turbo", "gpt-4-eu", "claude-3-opus-20240229", "gemini-pro"]
 
 client = Prem(
     api_key=prem_api_key
